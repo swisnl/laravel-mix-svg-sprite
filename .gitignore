@@ -1,3 +1,6 @@
+# IDE
+.idea/
+
 # Logs
 logs
 *.log
@@ -50,6 +53,9 @@ typings/
 
 # Output of 'npm pack'
 *.tgz
+
+# Yarn Lock File
+yarn.lock
 
 # Yarn Integrity file
 .yarn-integrity

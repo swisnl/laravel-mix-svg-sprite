@@ -1,0 +1,43 @@
+{
+  "name": "laravel-mix-svg-sprite",
+  "description": "SVG sprite component for Laravel Mix",
+  "version": "0.0.1",
+  "keywords": [
+    "laravel",
+    "mix",
+    "laravel mix",
+    "webpack",
+    "component",
+    "svg",
+    "sprite"
+  ],
+  "homepage": "https://github.com/swisnl/laravel-mix-svg-sprite",
+  "author": {
+    "name": "Jasper Zonneveld",
+    "url": "https://www.swis.nl/over-ons/jasper-zonneveld"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/swisnl/laravel-mix-svg-sprite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/swisnl/laravel-mix-svg-sprite/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "svg-sprite-loader": "^3.7.0",
+    "svgo": "^1.0.0",
+    "svgo-loader": "^2.1.0"
+  },
+  "peerDependencies": {
+    "laravel-mix": "^2.1.0"
+  },
+  "devDependencies": {
+    "laravel-mix": "^2.1.0"
+  },
+  "main": "index.js",
+  "files": [
+    "src",
+    "index.js"
+  ]
+}
