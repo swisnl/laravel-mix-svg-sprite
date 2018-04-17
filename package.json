@@ -36,10 +36,16 @@
     "eslint": "^4.19.1",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-plugin-node": "^6.0.1",
-    "laravel-mix": "^2.1.0"
+    "laravel-mix": "^2.1.0",
+    "mocha": "^5.1.0",
+    "mocha-junit-reporter": "^1.17.0",
+    "nyc": "^11.6.0"
   },
   "scripts": {
-    "lint": "eslint --format=node_modules/eslint-friendly-formatter src/ index.js config.js"
+    "lint": "eslint --format=node_modules/eslint-friendly-formatter src/ test/ index.js config.js",
+    "test": "mocha",
+    "test:coverage": "nyc mocha",
+    "coverage": "nyc report"
   },
   "main": "index.js",
   "files": [
