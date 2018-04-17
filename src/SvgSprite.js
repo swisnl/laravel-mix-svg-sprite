@@ -1,3 +1,5 @@
+'use strict';
+
 const path = require('path');
 const SvgSpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 

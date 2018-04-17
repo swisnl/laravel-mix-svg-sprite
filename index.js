@@ -1,3 +1,5 @@
+'use strict';
+
 const mix = require('laravel-mix');
 const config = require('./config');
 const SvgSprite = require('./src/SvgSprite');

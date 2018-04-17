@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
     // https://github.com/kisenka/svg-sprite-loader#configuration
     loaderOptions: {

@@ -33,11 +33,21 @@
     "laravel-mix": "^2.1.0"
   },
   "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-plugin-node": "^6.0.1",
     "laravel-mix": "^2.1.0"
+  },
+  "scripts": {
+    "lint": "eslint --format=node_modules/eslint-friendly-formatter src/ index.js config.js"
   },
   "main": "index.js",
   "files": [
     "src",
+    "config.js",
     "index.js"
-  ]
+  ],
+  "engines": {
+    "node": ">=4.0.0"
+  }
 }
