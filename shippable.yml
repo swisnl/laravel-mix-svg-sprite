@@ -1,0 +1,20 @@
+language: node_js
+
+# http://docs.shippable.com/platform/runtime/machine-image/language-versions/#nodejs
+node_js:
+  - "6.11.2"
+  - "7.10.1"
+  - "8.2.1"
+  - "9.4.0"
+
+build:
+  ci:
+    # Install
+    - npm install
+
+    # Code style
+    - npm run lint
+
+    # Tests
+    - npm run test:coverage -- --reporter=mocha-junit-reporter --reporter-options=mochaFile=$SHIPPABLE_REPO_DIR/shippable/testresults/junit1.xml
+    - npm run coverage -- --reporter=cobertura --report-dir=$SHIPPABLE_REPO_DIR/shippable/codecoverage
