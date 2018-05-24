@@ -43,6 +43,7 @@
   },
   "scripts": {
     "lint": "eslint --format=node_modules/eslint-friendly-formatter src/ test/ index.js config.js",
+    "fix": "eslint --format=node_modules/eslint-friendly-formatter src/ test/ index.js config.js --fix",
     "test": "mocha",
     "test:coverage": "nyc mocha",
     "coverage": "nyc report"

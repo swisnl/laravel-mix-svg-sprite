@@ -63,13 +63,34 @@ Config.svgSprite = {
 Configuration for SVGO is copied from ``Config.imgLoaderOptions.svgo``.
 If you disable SVGO for the image-loader, it is also disabled for this component.
 
-## License
+## Change log
 
-`laravel-mix-svg-sprite` is licensed under the MIT License - see the [LICENSE file](LICENSE) for details.
+Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+
+## Testing
+
+``` bash
+$ npm test
+```
+
+## Contributing
+
+Please see [CONTRIBUTING](CONTRIBUTING.md) and [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md) for details.
+
+## Security
+
+If you discover any security related issues, please email security@swis.nl instead of using the issue tracker.
 
 ## Credits
 
+- [Jasper Zonneveld](https://github.com/JaZo)
+- [All Contributors](../../contributors)
+
 This component is a wrapper for [SVG sprite loader](https://github.com/kisenka/svg-sprite-loader/graphs/contributors) and [SVGO loader](https://github.com/rpominov/svgo-loader/graphs/contributors), so a huge thanks to their contributors!
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE) for more information.
 
 ## SWIS
 
