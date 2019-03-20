@@ -32,7 +32,7 @@ describe('SvgSprite', function () {
 
     describe('name', function () {
         it('returns the correct names', function () {
-            assert.deepEqual(
+            assert.deepStrictEqual(
                 (new SvgSprite()).name(),
                 ['svgSprite', 'sprite']
             );
@@ -41,7 +41,7 @@ describe('SvgSprite', function () {
 
     describe('dependencies', function () {
         it('returns the correct dependencies', function () {
-            assert.deepEqual(
+            assert.deepStrictEqual(
                 (new SvgSprite()).dependencies(),
                 ['svg-sprite-loader', 'svgo-loader', 'svgo']
             );
@@ -53,7 +53,7 @@ describe('SvgSprite', function () {
             let instance = new SvgSprite();
             instance.register('src/icons');
 
-            assert.deepEqual(
+            assert.deepStrictEqual(
                 instance.config,
                 {
                     path: path.resolve(__dirname, 'src/icons'),
@@ -72,7 +72,7 @@ describe('SvgSprite', function () {
             let instance = new SvgSprite();
             instance.register('src/icons', 'dist/icon-sprite.svg', {custom: true}, {lorem: 'ipsum'});
 
-            assert.deepEqual(
+            assert.deepStrictEqual(
                 instance.config,
                 {
                     path: path.resolve(__dirname, 'src/icons'),
@@ -129,7 +129,7 @@ describe('SvgSprite', function () {
             // Remove the last rule for this test
             webpackConfig.module.rules.pop();
 
-            assert.deepEqual(
+            assert.deepStrictEqual(
                 webpackConfig,
                 {
                     module: {
@@ -174,7 +174,7 @@ describe('SvgSprite', function () {
             instance.register('src/icons');
             instance.webpackConfig(webpackConfig);
 
-            assert.deepEqual(
+            assert.deepStrictEqual(
                 webpackConfig.module.rules.pop(),
                 {
                     include: [
@@ -211,7 +211,7 @@ describe('SvgSprite', function () {
             instance.register('src/icons');
             instance.webpackConfig(webpackConfig);
 
-            assert.deepEqual(
+            assert.deepStrictEqual(
                 webpackConfig.module.rules.pop(),
                 {
                     include: [
