@@ -4,6 +4,10 @@ const path = require('path');
 const SvgSpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 class SvgSprite {
+    constructor() {
+        this.config = [];
+    }
+
     name() {
         return ['svgSprite', 'sprite'];
     }
@@ -16,63 +20,62 @@ class SvgSprite {
      * @param {String} iconPath
      * @param {String} [spriteFilename]
      * @param {Object} [loaderOptions]
-     * @param {Object} [pluginOptions]
      */
-    register(iconPath, spriteFilename, loaderOptions, pluginOptions) {
+    register(iconPath, spriteFilename, loaderOptions) {
         if (typeof spriteFilename === 'undefined') {
             spriteFilename = path.join(Config.fileLoaderDirs.images, 'sprite.svg');
         }
         if (typeof loaderOptions === 'undefined') {
             loaderOptions = Object.assign({}, Config.svgSprite.loaderOptions);
         }
-        if (typeof pluginOptions === 'undefined') {
-            pluginOptions = Object.assign({}, Config.svgSprite.pluginOptions);
-        }
 
-        this.config = {
+        this.config.push({
             path: path.resolve(Mix.paths.rootPath, iconPath),
-            loaderOptions: Object.assign({}, loaderOptions, {spriteFilename}),
-            pluginOptions
-        };
+            loaderOptions: Object.assign({}, loaderOptions, {spriteFilename})
+        });
     }
 
     webpackPlugins() {
-        return new SvgSpriteLoaderPlugin(this.config.pluginOptions);
+        return new SvgSpriteLoaderPlugin(Config.svgSprite.pluginOptions);
     }
 
     webpackConfig(webpackConfig) {
         // Exclude the icons directory from all rules that match svg files
-        webpackConfig.module.rules.forEach(rule => {
-            if (rule.test && rule.test.toString().includes('svg')) {
-                if (typeof rule.exclude === 'undefined') {
-                    rule.exclude = [];
-                } else if (typeof rule.exclude === 'string') {
-                    rule.exclude = [rule.exclude];
-                }
+        this.config.forEach(config => {
+            webpackConfig.module.rules.forEach(rule => {
+                if (rule.test && rule.test.toString().includes('svg')) {
+                    if (typeof rule.exclude === 'undefined') {
+                        rule.exclude = [];
+                    } else if (typeof rule.exclude === 'string') {
+                        rule.exclude = [rule.exclude];
+                    }
 
-                rule.exclude.push(this.config.path);
-            }
+                    rule.exclude.push(config.path);
+                }
+            });
         });
 
-        // Add our svg sprite rule
-        let loaders = [
-            {
-                loader: 'svg-sprite-loader',
-                options: this.config.loaderOptions
+        // Add our svg sprite rules
+        this.config.forEach(config => {
+            let loaders = [
+                {
+                    loader: 'svg-sprite-loader',
+                    options: config.loaderOptions
+                }
+            ];
+            if (Config.imgLoaderOptions.svgo !== false) {
+                loaders.push({
+                    loader: 'svgo-loader',
+                    options: Config.imgLoaderOptions.svgo
+                });
             }
-        ];
-        if (Config.imgLoaderOptions.svgo !== false) {
-            loaders.push({
-                loader: 'svgo-loader',
-                options: Config.imgLoaderOptions.svgo
+            webpackConfig.module.rules.push({
+                test: /\.(svg)(\?.*)?$/,
+                include: [
+                    config.path
+                ],
+                use: loaders
             });
-        }
-        webpackConfig.module.rules.push({
-            test: /\.(svg)(\?.*)?$/,
-            include: [
-                this.config.path
-            ],
-            use: loaders
         });
     }
 }

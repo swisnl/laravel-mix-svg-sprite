@@ -20,7 +20,7 @@ $ npm install --save-dev laravel-mix-svg-sprite
 
 ## Usage
 
-This component adds an extra API to Mix to create a SVG sprite of separate SVG files.
+This component adds an extra API to Mix to create an SVG sprite of separate SVG files.
 It can be used just like the other API's of Mix:
 
 ```javascript
@@ -32,7 +32,7 @@ require('laravel-mix-svg-sprite');
 mix
     .js('src', 'output')
     .sass('src', 'output')
-    .svgSprite('src/icons', 'output/sprite.svg', [loaderOptions], [pluginOptions]);
+    .svgSprite('src/icons', 'output/sprite.svg', [loaderOptions]);
 ```
 
 N.B. This component only adds a loader to the Webpack configuration, it doesn't glob your directory and include every file it finds.
