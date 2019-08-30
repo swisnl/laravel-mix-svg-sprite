@@ -33,7 +33,7 @@ mix
     .js('src', 'output')
     .sass('src', 'output')
     .svgSprite(
-        'src/icons', // The directory conatining your SVG files
+        'src/icons', // The directory containing your SVG files
         'output/sprite.svg', // The output path for the sprite
         [loaderOptions], // Optional, see https://github.com/kisenka/svg-sprite-loader#configuration
         [pluginOptions] // Optional, see https://github.com/kisenka/svg-sprite-loader#configuration
