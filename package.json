@@ -30,7 +30,7 @@
     "svgo-loader": "^2.1.0"
   },
   "peerDependencies": {
-    "laravel-mix": "^2.1.0"
+    "laravel-mix": ">=2.1.0"
   },
   "devDependencies": {
     "eslint": "^5.15.3",
