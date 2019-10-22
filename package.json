@@ -1,7 +1,7 @@
 {
   "name": "laravel-mix-svg-sprite",
   "description": "SVG sprite component for Laravel Mix",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "keywords": [
     "laravel",
     "mix",
