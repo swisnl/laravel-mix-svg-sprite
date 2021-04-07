@@ -1,13 +1,12 @@
 # laravel-mix-svg-sprite
 
-[![Node Version](https://img.shields.io/node/v/laravel-mix-svg-sprite.svg)](https://www.npmjs.com/package/laravel-mix-svg-sprite)
-[![Latest Version on NPM](https://img.shields.io/npm/v/laravel-mix-svg-sprite.svg)](https://www.npmjs.com/package/laravel-mix-svg-sprite)
-[![Code Style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
-[![Software License](https://img.shields.io/github/license/swisnl/laravel-mix-svg-sprite.svg)](LICENSE)
-[![Run Status](https://api.shippable.com/projects/5ad5a5902c5e9807003333da/badge?branch=master)](https://app.shippable.com/github/swisnl/laravel-mix-svg-sprite)
-[![Coverage Badge](https://api.shippable.com/projects/5ad5a5902c5e9807003333da/coverageBadge?branch=master)](https://app.shippable.com/github/swisnl/laravel-mix-svg-sprite)
-[![Known Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/laravel-mix-svg-sprite.svg)](https://snyk.io/test/github/swisnl/laravel-mix-svg-sprite?targetFile=package.json)
-[![Made by SWIS](https://img.shields.io/badge/%F0%9F%9A%80-made%20by%20SWIS-%23D9021B.svg)](https://www.swis.nl)
+[![Node Version](https://img.shields.io/node/v/laravel-mix-svg-sprite.svg?style=flat-square)](https://www.npmjs.com/package/laravel-mix-svg-sprite)
+[![Latest Version on NPM](https://img.shields.io/npm/v/laravel-mix-svg-sprite.svg?style=flat-square)](https://www.npmjs.com/package/laravel-mix-svg-sprite)
+[![Code Style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square)](http://standardjs.com)
+[![Software License](https://img.shields.io/github/license/swisnl/laravel-mix-svg-sprite.svg?style=flat-square)](LICENSE)
+[![Run Status](https://img.shields.io/travis/com/swisnl/laravel-mix-svg-sprite/master.svg?style=flat-square)](https://travis-ci.com/swisnl/laravel-mix-svg-sprite)
+[![Known Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/laravel-mix-svg-sprite.svg?style=flat-square)](https://snyk.io/test/github/swisnl/laravel-mix-svg-sprite?targetFile=package.json)
+[![Made by SWIS](https://img.shields.io/badge/%F0%9F%9A%80-made%20by%20SWIS-%23D9021B.svg?style=flat-square)](https://www.swis.nl)
 
 SVG sprite component for Laravel Mix, wrapping [SVG sprite loader](https://github.com/kisenka/svg-sprite-loader) and [SVGO loader](https://github.com/rpominov/svgo-loader).
 

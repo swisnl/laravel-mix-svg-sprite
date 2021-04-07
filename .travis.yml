@@ -1,0 +1,15 @@
+language: node_js
+
+node_js:
+  - 6
+  - 8
+  - 10
+  - 12
+  - 14
+
+install:
+  - travis_retry npm install
+
+script:
+  - npm run lint
+  - npm run test
