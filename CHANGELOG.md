@@ -8,9 +8,10 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ### Changed
 
+* Bumped minimum laravel-mix version to 6.
+* Bumped minimum Node.js version to 12.
 * Bumped SVGO to version 2.
 * Bumped other dependencies.
-* Bumped minimum Node.js version to 12.
 
 ## [1.0.2] - 2021-01-20
 
