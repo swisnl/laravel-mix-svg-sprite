@@ -6,6 +6,10 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ## [Unreleased]
 
+* Nothing
+
+## [2.0.0] - 2021-06-22
+
 ### Changed
 
 * Bumped minimum laravel-mix version to 6.
