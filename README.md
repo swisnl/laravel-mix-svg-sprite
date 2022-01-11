@@ -7,7 +7,7 @@
 [![Buy us a tree](https://img.shields.io/badge/Treeware-%F0%9F%8C%B3-lightgreen.svg?style=flat-square)](https://plant.treeware.earth/swisnl/laravel-mix-svg-sprite)
 [![Run Status](https://img.shields.io/travis/com/swisnl/laravel-mix-svg-sprite/master.svg?style=flat-square)](https://travis-ci.com/swisnl/laravel-mix-svg-sprite)
 [![Known Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/laravel-mix-svg-sprite.svg?style=flat-square)](https://snyk.io/test/github/swisnl/laravel-mix-svg-sprite?targetFile=package.json)
-[![Made by SWIS](https://img.shields.io/badge/%F0%9F%9A%80-made%20by%20SWIS-%23D9021B.svg?style=flat-square)](https://www.swis.nl)
+[![Made by SWIS](https://img.shields.io/badge/%F0%9F%9A%80-made%20by%20SWIS-%230737A9.svg?style=flat-square)](https://www.swis.nl)
 
 SVG sprite component for Laravel Mix, wrapping [SVG sprite loader](https://github.com/kisenka/svg-sprite-loader) and [SVGO loader](https://github.com/rpominov/svgo-loader).
 
