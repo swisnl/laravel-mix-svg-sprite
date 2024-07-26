@@ -40,8 +40,8 @@ mix
     );
 ```
 
-N.B. This component only adds a loader to the Webpack configuration, it doesn't glob your directory and include every file it finds.
-You need to require the icons from within your code (JS, CSS, etc.) just like other modules to have them added to the sprite!
+⚠️ This plugin only adds a loader to the Webpack configuration, it doesn't glob your icons directory and include every file it finds.
+You need to require the icons from within your code (JS, CSS, etc.) just like other modules, to have them added to the sprite!
 
 ## Configuration
 
